@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>H.5151 EXPOSED — The $9 Billion Illusion</title>
+<meta property="og:title" content="H.5151 EXPOSED — The $9 Billion Illusion">
+<meta property="og:description" content="85 sections. 24hr amendments. 48hr vote. We read it all.">
+<meta property="og:image" content="https://raw.githubusercontent.com/duncanburns2013-dot/Mass-Fiscal-Energy-Legislation/main/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://duncanburns2013-dot.github.io/Mass-Fiscal-Energy-Legislation/">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/duncanburns2013-dot/Mass-Fiscal-Energy-Legislation/main/social-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--red:#ff2d2d;--dred:#cc0000;--blue:#00b4ff;--dblue:#0088cc;--green:#00e676;--blue2:#00b4ff;--bg:#0a0a0a;--bg2:#141414;--bg3:#1a1a1a;--white:#ffffff;--light:#e0e0e0}
+body{background:var(--bg);color:var(--white);font-family:'Inter',sans-serif;font-weight:600;font-size:15px;overflow-x:hidden}
+#particles{position:fixed;inset:0;z-index:0;pointer-events:none}
+.wrap{position:relative;z-index:2;max-width:940px;margin:0 auto;padding:20px}
+.hdr{text-align:center;padding:40px 20px 28px}
+.hdr-tag{font-size:14px;font-weight:800;letter-spacing:6px;text-transform:uppercase;color:var(--red);margin-bottom:16px;animation:flicker 4s infinite}
+@keyframes flicker{0%,92%,94%,96%,100%{opacity:1}93%,95%{opacity:.3}}
+.hdr h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,9vw,90px);color:#fff;line-height:.9;margin-bottom:12px;text-shadow:0 0 80px rgba(255,45,45,.3)}
+.hdr h1 span{color:var(--red);animation:pulse 2.5s ease-in-out infinite}
+@keyframes pulse{0%,100%{text-shadow:0 0 30px rgba(255,45,45,.4)}50%{text-shadow:0 0 60px rgba(255,45,45,.8),0 0 120px rgba(255,45,45,.3)}}
+.hdr-sub{font-size:18px;font-weight:700;color:var(--light);max-width:600px;margin:0 auto;line-height:1.4}
+.hero-row{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin:28px 0 20px}
+.hero-box{background:var(--bg2);border:2px solid #333;border-radius:10px;padding:16px 24px;text-align:center;min-width:130px}
+.hero-box:nth-child(1){border-color:var(--red)}.hero-box:nth-child(2){border-color:var(--blue)}
+.hero-box:nth-child(3){border-color:var(--green)}.hero-box:nth-child(4){border-color:var(--red)}
+.hero-num{font-family:'Bebas Neue',sans-serif;font-size:48px;color:#fff;line-height:1}
+.hero-lbl{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--light);margin-top:4px}
+.tabs{display:flex;gap:6px;margin:24px 0 0}
+.tab{flex:1;padding:14px 10px;background:var(--bg2);border:2px solid #333;border-bottom:4px solid transparent;border-radius:10px 10px 0 0;cursor:pointer;text-align:center;transition:all .3s}
+.tab:hover{background:var(--bg3);border-bottom-color:rgba(255,45,45,.4)}
+.tab.active{background:var(--bg3);border-color:var(--red);border-bottom-color:var(--red);box-shadow:0 4px 24px rgba(255,45,45,.15)}
+.tab-num{font-family:'Bebas Neue',sans-serif;font-size:36px;color:#555;line-height:1;transition:color .3s}
+.tab.active .tab-num{color:var(--red)}
+.tab-label{font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#888;margin-top:2px;transition:color .3s}
+.tab.active .tab-label{color:#fff}
+.panel{display:none;background:var(--bg2);border:2px solid #333;border-top:none;border-radius:0 0 10px 10px;padding:32px 28px;animation:fadeIn .4s ease}
+.panel.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.p-tag{font-size:13px;font-weight:800;letter-spacing:4px;text-transform:uppercase;color:var(--red);margin-bottom:8px}
+.p-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,5vw,52px);color:#fff;line-height:1;margin-bottom:6px}
+.p-sub{font-size:16px;font-weight:700;color:var(--light);margin-bottom:28px}
+.chart-wrap{margin:24px 0;background:var(--bg3);border-radius:10px;padding:24px;border:2px solid #2a2a2a}
+.chart-wrap canvas{max-height:340px}
+.chart-title{font-family:'Bebas Neue',sans-serif;font-size:20px;color:#fff;letter-spacing:2px;margin-bottom:14px}
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:24px 0}
+.stat{background:var(--bg3);border-radius:8px;padding:20px;border-left:4px solid #555;transition:all .3s}
+.stat:hover{transform:translateY(-3px)}
+.stat.bad{border-left-color:var(--red)}.stat.warn{border-left-color:var(--blue)}.stat.good{border-left-color:var(--green)}
+.stat-val{font-family:'Bebas Neue',sans-serif;font-size:38px;line-height:1}
+.stat-val.bad{color:var(--red)}.stat-val.warn{color:var(--blue)}.stat-val.good{color:var(--green)}
+.stat-name{font-size:14px;font-weight:800;color:#fff;margin-top:4px}
+.stat-desc{font-size:13px;font-weight:600;color:var(--light);margin-top:6px;line-height:1.4}
+.vs{display:grid;grid-template-columns:1fr 50px 1fr;gap:14px;margin:24px 0}
+.vs-side h3{font-family:'Bebas Neue',sans-serif;font-size:24px;margin-bottom:12px;padding-bottom:8px;border-bottom:3px solid}
+.vs-side.cut h3{color:var(--green);border-color:var(--green)}
+.vs-side.kept h3{color:var(--red);border-color:var(--red)}
+.vs-mid{display:flex;align-items:center;justify-content:center}
+.vs-mid span{font-family:'Bebas Neue',sans-serif;font-size:24px;color:#555;writing-mode:vertical-rl}
+.vs-item{background:var(--bg3);border-radius:6px;padding:12px 14px;margin-bottom:8px;font-size:13px;font-weight:600;line-height:1.4;border-left:3px solid;color:var(--light)}
+.vs-item.ci{border-color:var(--green)}.vs-item.ki{border-color:var(--red)}
+.vs-item strong{color:#fff;display:block;font-size:14px;font-weight:800;margin-bottom:2px}
+.vs-total{text-align:center;margin-top:14px;padding:16px;border-radius:8px}
+.vs-total.ct{background:rgba(0,230,118,.08);border:2px solid rgba(0,230,118,.25)}
+.vs-total.kt{background:rgba(255,45,45,.08);border:2px solid rgba(255,45,45,.25)}
+.vs-total .tn{font-family:'Bebas Neue',sans-serif;font-size:42px}
+.vs-total .tl{font-size:13px;font-weight:800;color:var(--light);letter-spacing:2px;text-transform:uppercase;margin-top:4px}
+.tl-wrap{position:relative;padding-left:36px;margin:24px 0}
+.tl-wrap::before{content:'';position:absolute;left:12px;top:0;bottom:0;width:3px;background:linear-gradient(var(--red),var(--blue),var(--red))}
+.tl-i{position:relative;margin-bottom:28px}
+.tl-i::before{content:'';position:absolute;left:-31px;top:6px;width:16px;height:16px;border-radius:50%;border:2px solid var(--bg2);z-index:1}
+.tl-i:nth-child(1)::before{background:var(--red);box-shadow:0 0 20px rgba(255,45,45,.7)}
+.tl-i:nth-child(2)::before{background:var(--blue);box-shadow:0 0 20px rgba(0,180,255,.7)}
+.tl-i:nth-child(3)::before{background:var(--red);box-shadow:0 0 20px rgba(255,45,45,.9)}
+.tl-date{font-family:'Bebas Neue',sans-serif;font-size:32px;color:#fff}
+.tl-ev{font-size:18px;font-weight:800;margin-top:4px}
+.tl-ev.r{color:var(--red)}.tl-ev.b{color:var(--blue)}
+.tl-desc{font-size:14px;font-weight:600;color:var(--light);margin-top:6px;line-height:1.5}
+.buried{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:20px}
+.b-item{background:var(--bg3);padding:10px 12px;border-radius:6px;font-size:13px;font-weight:700;color:var(--light);border-left:3px solid #333;transition:all .3s}
+.b-item:hover{color:#fff;border-color:var(--blue);background:#1f1f1f}
+.b-item.hot{border-color:var(--red);color:#fff}
+.nc{background:rgba(255,45,45,.05);border:2px solid rgba(255,45,45,.2);border-radius:8px;padding:20px;margin:24px 0}
+.nc-i{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:14px;font-weight:700;color:var(--light)}
+.nc-i::before{content:'+ ';color:var(--red);font-weight:900;font-size:16px}
+.co{background:linear-gradient(135deg,#cc0000,#8b0000);border-radius:10px;padding:24px;text-align:center;margin-top:28px;position:relative;overflow:hidden}
+.co::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 5px,rgba(255,255,255,.015) 5px,rgba(255,255,255,.015) 10px)}
+.co h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3.5vw,36px);color:#fff;position:relative}
+.co p{font-size:15px;font-weight:700;color:#ffcccc;margin-top:8px;position:relative}
+.co.blue{background:linear-gradient(135deg,#004d80,#003355)}.co.blue p{color:#b3e0ff}
+.donut-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
+.cmp-grid{display:grid;gap:16px;margin:24px 0}
+.cmp-row{background:var(--bg3);border-radius:10px;padding:20px 24px;border:2px solid #2a2a2a}
+.cmp-label{font-family:'Bebas Neue',sans-serif;font-size:18px;color:#999;letter-spacing:3px;text-align:center;margin-bottom:12px}
+.cmp-pair{display:flex;align-items:center;justify-content:center;gap:16px}
+.cmp-box{text-align:center;min-width:120px;padding:12px 20px;border-radius:8px}
+.cmp-box.red{background:rgba(255,45,45,.12);border:2px solid rgba(255,45,45,.4)}
+.cmp-box.blu{background:rgba(0,180,255,.12);border:2px solid rgba(0,180,255,.4)}
+.cmp-num{font-family:'Bebas Neue',sans-serif;font-size:52px;line-height:1}
+.cmp-box.red .cmp-num{color:var(--red)}.cmp-box.blu .cmp-num{color:var(--blue)}
+.cmp-who{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--light);margin-top:4px}
+.cmp-vs{font-family:'Bebas Neue',sans-serif;font-size:20px;color:#555}
+.cmp-verdict{font-family:'Bebas Neue',sans-serif;font-size:18px;text-align:center;margin-top:10px;letter-spacing:2px}
+.ft{padding:32px 0;border-top:2px solid #222;text-align:center;margin-top:24px}
+.ft p{font-size:13px;font-weight:600;color:var(--light);line-height:2}
+.ft a{color:var(--red);text-decoration:none;font-weight:800}
+.ft .cta{font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--red);margin-bottom:14px}
+@media(max-width:640px){.vs{grid-template-columns:1fr}.vs-mid{display:none}.buried{grid-template-columns:1fr}.hero-row{gap:8px}.hero-box{min-width:70px;padding:10px 14px}.hero-num{font-size:36px}.panel{padding:20px 16px}.stat-grid{grid-template-columns:1fr 1fr}.donut-grid{grid-template-columns:1fr}.tab{padding:10px 6px}.tab-num{font-size:28px}.cmp-num{font-size:38px}.cmp-box{min-width:90px;padding:10px 14px}}
+</style>
+</head>
+<body>
+<canvas id="particles"></canvas>
+<div class="wrap">
+<div class="hdr">
+  <div class="hdr-tag">🚨 BILL ANALYSIS — H.5151 — FEB 24, 2026</div>
+  <h1>THE <span>$9 BILLION</span> ILLUSION</h1>
+
+</div>
+<div class="hero-row">
+  <div class="hero-box"><div class="hero-num" data-count="85">0</div><div class="hero-lbl">Sections</div></div>
+  <div class="hero-box"><div class="hero-num" data-count="24">0</div><div class="hero-lbl">Hrs Amendments</div></div>
+  <div class="hero-box"><div class="hero-num" data-count="15">0</div><div class="hero-lbl">% Gap Closed</div></div>
+  <div class="hero-box"><div class="hero-num" data-count="79">0</div><div class="hero-lbl">% Above US Avg</div></div>
+</div>
+<div class="tabs">
+  <div class="tab active" onclick="showTab(0)"><div class="tab-num">01</div><div class="tab-label">The Math</div></div>
+  <div class="tab" onclick="showTab(1)"><div class="tab-num">02</div><div class="tab-label">Cut vs Kept</div></div>
+  <div class="tab" onclick="showTab(2)"><div class="tab-num">03</div><div class="tab-label">Speed Run</div></div>
+  <div class="tab" onclick="showTab(3)"><div class="tab-num">04</div><div class="tab-label">Your Bill</div></div>
+</div>
+
+<!-- TAB 1: CORRECTED NUMBERS -->
+<div class="panel active" id="p0">
+  <div class="p-tag">Graphic 1 — The Fantasy Math</div>
+  <div class="p-title">"$9 BILLION IN SAVINGS"</div>
+  <div class="p-sub">What They Claim vs. What You Actually Get</div>
+  <div class="chart-wrap"><div class="chart-title">ANNUAL IMPACT PER HOUSEHOLD</div><canvas id="c1a"></canvas></div>
+  <div class="chart-wrap"><div class="chart-title">WHERE THE "SAVINGS" ACTUALLY COME FROM</div><canvas id="c1b"></canvas></div>
+  <div class="stat-grid">
+    <div class="stat bad"><div class="stat-val bad">$982</div><div class="stat-name">Annual MA Overpayment</div><div class="stat-desc">vs. US avg. 30.88¢ vs 17.24¢/kWh at 600 kWh/mo. EIA Dec 2025.</div></div>
+    <div class="stat warn"><div class="stat-val warn">$310</div><div class="stat-name">Their Claim / HH / Year</div><div class="stat-desc">$9B ÷ 2.9M homes ÷ 10 years = fantasy math.</div></div>
+    <div class="stat good"><div class="stat-val good">~$150</div><div class="stat-name">Realistic Relief</div><div class="stat-desc">Mass Save cut + ACP rebates + net metering reform.</div></div>
+    <div class="stat bad"><div class="stat-val bad">15%</div><div class="stat-name">Gap Actually Closed</div><div class="stat-desc">$150 relief against $982 overpayment. That's it.</div></div>
+  </div>
+  <div class="co"><h3>~15% OF THE GAP. THAT'S ALL YOU GET.</h3><p>$150/yr relief against $982/yr overpayment. MA is #4 most expensive state in America.</p></div>
+</div>
+
+<!-- TAB 2 -->
+<div class="panel" id="p1">
+  <div class="p-tag">Graphic 2 — The Real Story</div>
+  <div class="p-title">WHAT THEY CUT VS. WHAT THEY KEPT</div>
+  <div class="p-sub">They trimmed branches while fertilizing the root.</div>
+  <div class="chart-wrap"><div class="chart-title">CUTS vs. UNTOUCHED POLICY CHARGES — $/YR PER HOUSEHOLD</div><canvas id="c2"></canvas></div>
+  <div class="vs">
+    <div class="vs-side cut">
+      <h3>✂️ WHAT THEY CUT</h3>
+      <div class="vs-item ci"><strong>Mass Save — $1B cut</strong>$4.5B → ~$3.5B thru 2027 (22% reduction)</div>
+      <div class="vs-item ci"><strong>Net Metering — $380M / 10yr</strong>New "supply rate" credits for large facilities only</div>
+      <div class="vs-item ci"><strong>ACP Rebates — 70% returned</strong>TEMPORARY — 3 years, then conditional triggers</div>
+      <div class="vs-item ci"><strong>Supplier Scams — BANNED</strong>$5M bonds required, low-income protected, $100K fines</div>
+      <div class="vs-item ci"><strong>Utility Audits — NEW</strong>DPU can audit every 5 yrs. Penalties can't hit ratepayers.</div>
+      <div class="vs-total ct"><div class="tn" style="color:var(--green)">~$150/yr</div><div class="tl">Realistic Savings</div></div>
+    </div>
+    <div class="vs-mid"><span>VS</span></div>
+    <div class="vs-side kept">
+      <h3>🔒 KEPT + ADDED</h3>
+      <div class="vs-item ki"><strong>🔒 Net Zero by 2050</strong>Driving $377/yr in labeled policy charges — UNTOUCHED</div>
+      <div class="vs-item ki"><strong>🔒 50% Emissions Cut by 2030</strong>Legally binding sublimit — UNTOUCHED</div>
+      <div class="vs-item ki"><strong>📈 10 GW Offshore Wind by 2040</strong>EXPANDED — only 800 MW contracted in a decade</div>
+      <div class="vs-item ki"><strong>🆕 10 GW Solar by 2040</strong>NEW mandate — costs "shared collectively"</div>
+      <div class="vs-item ki"><strong>🏛️ New Procurement Agency</strong>Division of Clean Energy Procurement — tariff funded</div>
+      <div class="vs-item ki"><strong>💰 Central Procurement Fund</strong>Ratepayer money for 30-year contracts</div>
+      <div class="vs-item ki"><strong>💰 Offshore Wind Co-Investment</strong>State partners with developers using YOUR money</div>
+      <div class="vs-item ki"><strong>💸 Inclusive Utility Investment</strong>ALL ratepayers subsidize participants' upgrades</div>
+      <div class="vs-total kt"><div class="tn" style="color:var(--red)">$377/yr</div><div class="tl">Labeled Policy Charges — Untouched + Growing</div></div>
+    </div>
+  </div>
+  <div class="co blue"><h3>MICHLEWITZ ON THE 2030 MANDATES:</h3><p>"The membership was not ready for that conversation today."</p></div>
+</div>
+
+<!-- TAB 3 -->
+<div class="panel" id="p2">
+  <div class="p-tag">Graphic 3 — The Beacon Hill Special</div>
+  <div class="p-title">85 SECTIONS. 24HR AMENDMENTS. 48HR VOTE.</div>
+  <div class="p-sub">The less time you have to read, the less time you have to object.</div>
+  <div class="cmp-grid">
+    <div class="cmp-row">
+      <div class="cmp-label">BILL SECTIONS</div>
+      <div class="cmp-pair">
+        <div class="cmp-box red"><div class="cmp-num">85</div><div class="cmp-who">H.5151</div></div>
+        <div class="cmp-vs">vs</div>
+        <div class="cmp-box blu"><div class="cmp-num">45</div><div class="cmp-who">Healey's</div></div>
+      </div>
+      <div class="cmp-verdict" style="color:var(--red)">89% LARGER BILL</div>
+    </div>
+    <div class="cmp-row">
+      <div class="cmp-label">TIME FOR AMENDMENTS</div>
+      <div class="cmp-pair">
+        <div class="cmp-box red"><div class="cmp-num">24<span style="font-size:24px"> HRS</span></div><div class="cmp-who">H.5151</div></div>
+        <div class="cmp-vs">vs</div>
+        <div class="cmp-box blu"><div class="cmp-num">90<span style="font-size:24px"> DAYS</span></div><div class="cmp-who">Healey's</div></div>
+      </div>
+      <div class="cmp-verdict" style="color:var(--red)">99% LESS TIME TO READ IT</div>
+    </div>
+    <div class="cmp-row">
+      <div class="cmp-label">DAYS TO FULL VOTE</div>
+      <div class="cmp-pair">
+        <div class="cmp-box red"><div class="cmp-num">2</div><div class="cmp-who">H.5151</div></div>
+        <div class="cmp-vs">vs</div>
+        <div class="cmp-box blu"><div class="cmp-num">180</div><div class="cmp-who">Healey's</div></div>
+      </div>
+      <div class="cmp-verdict" style="color:var(--red)">90× FASTER TO VOTE</div>
+    </div>
+    <div class="cmp-row">
+      <div class="cmp-label">PUBLIC HEARING HOURS</div>
+      <div class="cmp-pair">
+        <div class="cmp-box red"><div class="cmp-num">0</div><div class="cmp-who">H.5151</div></div>
+        <div class="cmp-vs">vs</div>
+        <div class="cmp-box blu"><div class="cmp-num">6</div><div class="cmp-who">Healey's</div></div>
+      </div>
+      <div class="cmp-verdict" style="color:var(--red)">ZERO PUBLIC INPUT</div>
+    </div>
+  </div>
+  <div class="tl-wrap">
+    <div class="tl-i"><div class="tl-date">TUE FEB 24</div><div class="tl-ev r">85-SECTION BILL DROPPED</div><div class="tl-desc">Ways & Means releases full text. No public review. Rewrites Healey's bill with deeper cuts and billions in new procurement mandates.</div></div>
+    <div class="tl-i"><div class="tl-date" style="color:var(--blue)">WED FEB 25</div><div class="tl-ev b">ALL AMENDMENTS DUE</div><div class="tl-desc">Representatives get 24 hours to read 85 sections — new state agencies, $10B+ procurement mandates, licensing regimes — and file amendments.</div></div>
+    <div class="tl-i"><div class="tl-date">THU FEB 26</div><div class="tl-ev r">FULL HOUSE VOTE</div><div class="tl-desc">Then to Senate where climate hawk Sen. Barrett chairs energy. Conference committee could take months. No relief this winter.</div></div>
+  </div>
+  <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--blue);letter-spacing:2px;margin:24px 0 10px">WHAT'S BURIED IN 85 SECTIONS:</div>
+  <div class="buried">
+    <div class="b-item hot">New state procurement bureaucracy</div><div class="b-item hot">10 GW offshore wind mandate</div>
+    <div class="b-item hot">10 GW solar mandate by 2040</div><div class="b-item hot">Central Procurement Fund</div>
+    <div class="b-item hot">State offshore wind co-investment</div><div class="b-item hot">Inclusive Utility Investment</div>
+    <div class="b-item">Solar salesperson licensing regime</div><div class="b-item">DER provider licensing</div>
+    <div class="b-item">V2G interconnection framework</div><div class="b-item">Thermal energy labor rules</div>
+    <div class="b-item">Highway transmission corridors</div><div class="b-item">Gas company geothermal</div>
+    <div class="b-item">Community solar disclosure (4 pgs)</div><div class="b-item">Utility asset leasing</div>
+    <div class="b-item">Flexible interconnection</div><div class="b-item">Renewable natural gas</div>
+    <div class="b-item">Gas just transition plans</div><div class="b-item">Energy storage incentive</div>
+  </div>
+  <div class="co"><h3>THIS IS BY DESIGN. NOT INCOMPETENCE.</h3><p>Healey's bill got a 6-hour hearing. This rewrite? 24 hours for amendments.</p></div>
+</div>
+
+<!-- TAB 4: CORRECTED BILL -->
+<div class="panel" id="p3">
+  <div class="p-tag">Graphic 4 — Your Actual Electric Bill</div>
+  <div class="p-title">STILL 68% ABOVE NATIONAL AVERAGE</div>
+  <div class="p-sub">You save ~$12/month. They add billions in new mandates.</div>
+  <div class="donut-grid">
+    <div class="chart-wrap" style="text-align:center"><div class="chart-title">CURRENT — $185/MO</div><canvas id="c4a"></canvas></div>
+    <div class="chart-wrap" style="text-align:center"><div class="chart-title">AFTER H.5151 — ~$173/MO</div><canvas id="c4b"></canvas></div>
+  </div>
+  <div class="chart-wrap"><div class="chart-title">STATE COMPARISON — MONTHLY BILL AT 600 KWH (EIA DEC 2025)</div><canvas id="c4c"></canvas></div>
+  <div class="nc">
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--red);letter-spacing:2px;margin-bottom:14px">NEW COSTS H.5151 ADDS TO FUTURE BILLS:</div>
+    <div class="nc-i">10 GW offshore wind — long-term contracts recovered through ratepayer tariffs</div>
+    <div class="nc-i">10 GW solar procurement — same cost recovery mechanism</div>
+    <div class="nc-i">Central Procurement Fund — tariff-funded account for 30-year contracts</div>
+    <div class="nc-i">State offshore wind co-investment — ratepayer $ to "accelerate" developers</div>
+    <div class="nc-i">Inclusive Utility Investment — ALL ratepayers subsidize participants</div>
+    <div class="nc-i">Solar + energy storage incentive programs — "shared collectively"</div>
+  </div>
+  <div class="co"><h3>THIS ISN'T REFORM. IT'S A REMODEL OF THE SAME MACHINE.</h3><p>You save $12/month today. Every new mandate becomes tomorrow's line item.</p></div>
+</div>
+
+<div class="ft">
+  <div class="cta">READ IT YOURSELF. YOU HAVE 24 HOURS. THAT'S THE POINT.</div>
+  <p><strong>Bill:</strong> <a href="https://malegislature.gov/Bills/194/H5151" target="_blank">malegislature.gov/Bills/194/H5151</a> · <strong>Amendments:</strong> <a href="https://malegislature.gov/Bills/194/H5151/Amendments/House" target="_blank">H5151/Amendments</a><br>
+  <strong>Data:</strong> EIA Electric Power Monthly Table 5.6.A (Dec 2025) · Eversource Verified Rate Breakdown · CommonWealth Beacon<br>
+  <a href="https://x.com/DuncanBurnsMA" target="_blank">@DuncanBurnsMA</a> · <a href="https://github.com/duncanburns2013-dot/Mass-Fiscal-Energy-Legislation" target="_blank">GitHub</a> · #mapoli</p>
+</div>
+</div>
+
+<script>
+// PARTICLES
+!function(){const c=document.getElementById('particles'),x=c.getContext('2d');let w,h,ps=[];
+function R(){w=c.width=innerWidth;h=c.height=innerHeight}addEventListener('resize',R);R();
+class P{constructor(){this.r()}r(){this.x=Math.random()*w;this.y=Math.random()*h;this.vx=(Math.random()-.5)*.3;this.vy=(Math.random()-.5)*.3;this.s=Math.random()*1.8+.5;this.a=Math.random()*.15+.03;this.c=Math.random()>.85?'255,45,45':'255,255,255'}u(){this.x+=this.vx;this.y+=this.vy;if(this.x<0||this.x>w||this.y<0||this.y>h)this.r()}d(){x.beginPath();x.arc(this.x,this.y,this.s,0,6.28);x.fillStyle='rgba('+this.c+','+this.a+')';x.fill()}}
+for(let i=0;i<50;i++)ps.push(new P);
+!function l(){x.clearRect(0,0,w,h);ps.forEach(p=>{p.u();p.d()});
+for(let i=0;i<ps.length;i++)for(let j=i+1;j<ps.length;j++){const dx=ps[i].x-ps[j].x,dy=ps[i].y-ps[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<110){x.beginPath();x.moveTo(ps[i].x,ps[i].y);x.lineTo(ps[j].x,ps[j].y);x.strokeStyle='rgba(255,45,45,'+(0.03*(1-d/110))+')';x.lineWidth=.6;x.stroke()}}
+requestAnimationFrame(l)}()}();
+
+// TABS
+let cur=0;const tabs=document.querySelectorAll('.tab'),panels=document.querySelectorAll('.panel');
+function showTab(n){tabs[cur].classList.remove('active');panels[cur].classList.remove('active');cur=n;tabs[n].classList.add('active');panels[n].classList.add('active');if(n===1&&!d2)bC2();if(n===3&&!d4)bC4()}
+
+// CHART GLOBALS
+Chart.defaults.color='#ffffff';Chart.defaults.borderColor='rgba(255,255,255,.08)';
+Chart.defaults.font.family="'Inter',sans-serif";Chart.defaults.font.size=14;Chart.defaults.font.weight=700;
+Chart.defaults.plugins.legend.labels.usePointStyle=true;Chart.defaults.plugins.legend.labels.padding=14;
+Chart.defaults.plugins.legend.labels.font={size:14,weight:800,family:"'Inter'"};
+
+// CHART 1A: CORRECTED — $982 gap
+new Chart(document.getElementById('c1a'),{type:'bar',data:{
+  labels:['MA Overpays vs.\nUS Average','Their Claim\n($9B ÷ 10yr ÷ 2.9M)','Realistic\nNear-Term Relief'],
+  datasets:[{data:[982,310,150],
+    backgroundColor:['#ff2d2d','#00b4ff','#00e676'],
+    borderColor:['#ff2d2d','#00b4ff','#00e676'],borderWidth:2,borderRadius:6,barThickness:50}]
+},options:{indexAxis:'y',plugins:{legend:{display:false},
+  tooltip:{titleFont:{size:15,weight:900},bodyFont:{size:15,weight:700},padding:12,
+    callbacks:{label:c=>'  $'+c.raw+'/yr per household'}}},
+  scales:{x:{grid:{color:'rgba(255,255,255,.06)'},ticks:{callback:v=>'$'+v,font:{size:15,weight:900},color:'#fff'},max:1100},
+  y:{grid:{display:false},ticks:{font:{size:14,weight:800},color:'#fff'}}},
+  animation:{duration:1500,easing:'easeOutQuart'}}});
+
+// CHART 1B: SAVINGS BREAKDOWN
+new Chart(document.getElementById('c1b'),{type:'bar',data:{
+  labels:['Mass Save\nCut','ACP\nRebates','Net Metering\nReform','Procurement\n"Savings"','Budget\nBilling'],
+  datasets:[{label:'Annual Savings',data:[105,30,13,0,0],
+    backgroundColor:['#00e676','#00b4ff','#00b4ff','#ff2d2d','#ff2d2d'],
+    borderColor:['#00e676','#00b4ff','#00b4ff','#ff2d2d','#ff2d2d'],borderWidth:2,borderRadius:6,barThickness:40}]
+},options:{plugins:{legend:{display:false},
+  tooltip:{bodyFont:{size:15,weight:700},padding:12,callbacks:{
+    label:c=>c.raw===0?'  $0 — No savings':'  ~$'+c.raw+'/yr',
+    afterLabel:c=>['REAL — $1B from $4.5B budget','TEMPORARY — only until 2029','$380M ÷ 10yrs ÷ 2.9M homes','Replaces utility fees with state bureaucracy','Same cost spread over 12 months'][c.dataIndex]
+  }}},scales:{y:{grid:{color:'rgba(255,255,255,.06)'},ticks:{callback:v=>'$'+v,font:{size:15,weight:900},color:'#fff'},beginAtZero:true},
+  x:{grid:{display:false},ticks:{font:{size:13,weight:800},color:'#fff'}}},
+  animation:{duration:1500,delay:c=>c.dataIndex*200}}});
+
+// CHART 2: CUT vs KEPT — CORRECTED to verified 17%
+let d2=false;function bC2(){d2=true;new Chart(document.getElementById('c2'),{type:'bar',data:{
+  labels:['Mass Save\nCut','ACP\nRebates','Net Metering','RPS/Clean\nEnergy','Mass Save\n(remaining)','Offshore Wind\n(expanded)','New Solar\nMandate'],
+  datasets:[
+    {label:'✅ Savings',data:[105,30,13,0,0,0,0],backgroundColor:'#00e676',borderColor:'#00e676',borderWidth:2,borderRadius:6,barThickness:28},
+    {label:'🔒 Untouched',data:[0,0,0,125,252,0,0],backgroundColor:'#ff2d2d',borderColor:'#ff2d2d',borderWidth:2,borderRadius:6,barThickness:28},
+    {label:'🆕 NEW Costs',data:[0,0,0,0,0,50,30],backgroundColor:'#00b4ff',borderColor:'#00b4ff',borderWidth:2,borderRadius:6,barThickness:28}
+  ]},options:{plugins:{legend:{position:'top'},
+  tooltip:{bodyFont:{size:14,weight:700},padding:12,callbacks:{label:c=>c.raw?'  $'+c.raw+'/yr per household':''}}},
+  scales:{y:{stacked:true,grid:{color:'rgba(255,255,255,.06)'},ticks:{callback:v=>'$'+v,font:{size:15,weight:900},color:'#fff'},beginAtZero:true},
+  x:{stacked:true,grid:{display:false},ticks:{font:{size:12,weight:800},color:'#fff',maxRotation:0}}},
+  animation:{duration:1800}}})}
+
+// CHART 3: REMOVED — replaced with comparison grid
+let d3=true;
+
+// CHART 4: YOUR BILL — CORRECTED to EIA Dec 2025
+let d4=false;function bC4(){d4=true;
+const dO={plugins:{legend:{position:'bottom',labels:{font:{size:14,weight:800},color:'#fff',padding:12}},
+  tooltip:{bodyFont:{size:15,weight:700},padding:12,callbacks:{label:c=>c.label+': $'+c.raw+'/mo'}}},
+  cutout:'50%',animation:{animateRotate:true,duration:1500}};
+
+// Current: $185/mo = 30.88¢ × 600. Eversource verified split: 40/30/17/13
+new Chart(document.getElementById('c4a'),{type:'doughnut',data:{
+  labels:['Supply $74','Distribution $56','Policy $31','Transmission $24'],
+  datasets:[{data:[74,56,31,24],backgroundColor:['#00b4ff','#a855f7','#ff2d2d','#888'],borderWidth:0,hoverOffset:10}]},options:dO});
+
+// After: ~$173/mo
+new Chart(document.getElementById('c4b'),{type:'doughnut',data:{
+  labels:['Supply $69','Distribution $52','Policy $28 ⬇','Transmission $23'],
+  datasets:[{data:[69,52,28,23],backgroundColor:['#00b4ff','#a855f7','#00e676','#888'],borderWidth:0,hoverOffset:10}]},options:dO});
+
+// State comparison — ALL from EIA Dec 2025 × 600 kWh
+new Chart(document.getElementById('c4c'),{type:'bar',data:{
+  labels:['Louisiana\n12.56¢','Texas\n15.87¢','Florida\n15.02¢','US Average\n17.24¢','Connecticut\n25.30¢','New York\n27.39¢','MA After\nH.5151','MA Current\n30.88¢'],
+  datasets:[{label:'Monthly Bill',data:[75,95,90,103,152,164,173,185],
+    backgroundColor:['#00e676','#00e676','#00e676','#00b4ff','#00b4ff','#00b4ff','#ff2d2d','#ff2d2d'],
+    borderColor:['#00e676','#00e676','#00e676','#00b4ff','#00b4ff','#00b4ff','#ff2d2d','#ff2d2d'],
+    borderWidth:2,borderRadius:6,barThickness:38}]
+},options:{plugins:{legend:{display:false},
+  tooltip:{bodyFont:{size:15,weight:700},padding:12,callbacks:{label:c=>'  $'+c.raw+'/month'}}},
+  scales:{y:{grid:{color:'rgba(255,255,255,.06)'},ticks:{callback:v=>'$'+v,font:{size:15,weight:900},color:'#fff'},beginAtZero:true,max:200},
+  x:{grid:{display:false},ticks:{font:{size:12,weight:800},color:'#fff',maxRotation:45}}},
+  animation:{duration:1500,delay:c=>c.dataIndex*120}}})}
+
+// COUNTERS
+const ctrs=document.querySelectorAll('[data-count]');
+const cO=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){const t=+e.target.dataset.count;let c=0;const s=t/30;const i=setInterval(()=>{c+=s;if(c>=t){c=t;clearInterval(i)}e.target.textContent=Math.round(c)},25);cO.unobserve(e.target)}})},{threshold:.5});
+ctrs.forEach(c=>cO.observe(c));
+</script>
+</body>
+</html>
